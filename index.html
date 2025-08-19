@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAN HARVEY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #242e33;
+            margin: 0;
+            padding: 0;
+        }
+        .floating-navbar-container {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1050;
+            width: 60%;
+            transition: all 0.3s;
+        }
+        .navbar.bg-dark {
+            background: rgba(142, 149, 177, 0.5) !important; /* 50% transparent #8e95b1 */
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+            transition: background 0.3s, border-radius 0.3s, width 0.3s;
+        }
+        .section {
+            min-height: 100vh;
+            width: 100%;
+        }
+        .section-1 {
+            background: url('assets/src/sec1bg.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        .section-2 {
+            background-color: #8e95b1;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .section-3 {
+            background-color: #242e33;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        /* Styles when navbar is at the top */
+        .navbar-top {
+            position: fixed;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            transform: none !important;
+            border-radius: 0 !important;
+            z-index: 1050;
+        }
+        .navbar-top .navbar.bg-dark {
+            background: rgba(36, 46, 51, 0.5) !important; /* 50% transparent #242e33 */
+            border-radius: 0 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        /* me.png pop up animation */
+        .me-img {
+            position: absolute;
+            right: 8%;
+            bottom: 0;
+            max-height: 90vh;
+            width: auto;
+            opacity: 0.7;
+            transform: scale(0.8) translateY(40px);
+            animation: popUp 1s cubic-bezier(.22,1.12,.79,.98) 0.2s forwards;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
+        @keyframes popUp {
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="floating-navbar-container" id="navbarContainer">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#section1">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Background</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="section1" class="section section-1 d-flex align-items-center">
+        <img src="assets/src/name.png" alt="Name" id="nameImg" style="position:absolute; right:37%; top:20%; width:816px; height:226px;" class="name-animate">
+        <img src="assets/src/role.png" alt="Role" id="roleImg" style="position:absolute; right:54.5%; bottom:27%; width:500px; height:195px;" class="name-animate">
+        <img src="assets/src/quote.png" alt="Quote" id="quoteImg" style="position:absolute; right:46.5%; bottom:15%; width:615px; height:180px;" class="name-animate">
+        <a href="https://facebook.com/sean.deleon.55" target="_blank">
+        <img src="assets/src/fb_logo.png" alt="FB_Logo" id="fblogoImg" class="social-logo" style="position:absolute; left:6%; bottom:10%; width:80px; height:50px;">
+        </a>
+        <a href="https://instagram.com/whosharv_" target="_blank">
+            <img src="assets/src/ig_logo.png" alt="IG_Logo" id="iglogoImg" class="social-logo" style="position:absolute; left:10.5%; bottom:10%; width:80px; height:50px;">
+        </a>
+    </div>
+
+
+    <div id="section2" class="section section-2">
+        <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+            <div class="card h-100">
+                <img src="assets/src\img4.jpg" class="card-img-top" alt="Smart Parking System">
+                <div class="card-body">
+                <h5 class="card-title">Smart Parking System</h5>
+                <p class="card-text">adsgdasfgda</p>
+                <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="card h-100">
+            <img src="assets/src\img5.jpg" class="card-img-top" alt="Hand Sign Robot">
+            <div class="card-body">
+            <h5 class="card-title">Hand Sign Robot</h5>
+            <p class="card-text">sdgkjadsogsa</p>
+            <a href="#" class="btn btn-primary">Button</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="card h-100">
+            <img src="assets/src\img6.jpg" class="card-img-top" alt="Event Management System">
+            <div class="card-body">
+            <h5 class="card-title">Event Management System</h5>
+            <p class="card-text">asjdksjdfjsf</p>
+            <a href="#" class="btn btn-primary">Button</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="section3" class="section section-3 py-5" style="background:#242e33;">
+    <div class="container position-relative">
+        <h2 class="text-center mb-5" style="color:#b6c3cd; letter-spacing:2px;">Education Timeline</h2>
+        <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item left">
+            <div class="card shadow-sm">
+            <img src="assets/src/ue_cpe.png" class="card-img-top" alt="University of the East - Manila">
+            <div class="card-body">
+                <h6 class="text-muted mb-1">Tertiary Education</h6>
+                <h5 class="card-title mb-1">University of the East - Manila</h5>
+                <p class="text-muted" style="font-size:0.95em;">2022-Present</p>
+                <a href="#" class="btn btn-primary btn-sm">See more</a>
+            </div>
+            </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item right">
+            <div class="card shadow-sm">
+            <img src="assets/src/ue_cpe.png" class="card-img-top" alt="University of the East - Manila">
+            <div class="card-body">
+                <h6 class="text-muted mb-1">Senior High School</h6>
+                <h5 class="card-title mb-1">ABE International Business College - Cubao</h5>
+                <p class="text-muted" style="font-size:0.95em;">2020–2022</p>
+                <a href="#" class="btn btn-primary btn-sm">See more</a>
+            </div>
+            </div>
+        </div>
+        <!-- Add more timeline items as needed -->
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Switch navbar to top and change color in section 2
+        const navbarContainer = document.getElementById('navbarContainer');
+        const section2 = document.getElementById('section2');
+
+        window.addEventListener('scroll', function() {
+            const section2Top = section2.getBoundingClientRect().top;
+            if (section2Top <= 30) {
+                navbarContainer.classList.add('navbar-top');
+            } else {
+                navbarContainer.classList.remove('navbar-top');
+            }
+        });
+    </script>
+</body>
+</html>
